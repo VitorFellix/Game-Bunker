@@ -1,8 +1,8 @@
-package com.classes.map;
+package main.java.com.classes.map;
 
-import com.classes.entities.Entity;
+import main.java.com.classes.entities.Entity;
 
-public class Map_Pixel{
+public class Map_Pixel {
     private String texture = "x";
     private Entity entity = null; 
 

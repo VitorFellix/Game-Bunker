@@ -1,13 +1,13 @@
-package com.classes.map;
+package main.java.com.classes.map;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import com.App;
-import com.classes.entities.Entity;
-import com.classes.entities.Wall;
+import main.java.com.App;
+import main.java.com.classes.entities.Entity;
+import main.java.com.classes.entities.Wall;
 
 public class Map_Grid {
     // private int enemy_spawn_max = 0;

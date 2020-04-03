@@ -1,7 +1,7 @@
-package com.classes.entities.player;
+package main.java.com.classes.entities.player;
 
-import com.classes.entities.Entity;
-import com.classes.variables.Vector2;
+import main.java.com.classes.entities.Entity;
+import main.java.com.classes.variables.Vector2;
 
 public class Player extends Entity {
 

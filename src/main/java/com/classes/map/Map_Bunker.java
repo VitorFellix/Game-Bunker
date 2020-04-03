@@ -1,6 +1,6 @@
-package com.classes.map;
+package main.java.com.classes.map;
 
-import com.classes.entities.Entity;
+import main.java.com.classes.entities.Entity;
 
 public class Map_Bunker {
     private Map_List map_List;

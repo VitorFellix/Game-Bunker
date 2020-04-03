@@ -1,9 +1,9 @@
-package com;
+package main.java.com;
 
 import java.util.Scanner;
 
-import com.classes.map.Map_Bunker;
-import com.classes.map.Map_Status;
+import main.java.com.classes.map.Map_Bunker;
+import main.java.com.classes.map.Map_Status;
 
 public class App {
 

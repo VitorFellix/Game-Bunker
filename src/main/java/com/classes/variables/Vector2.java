@@ -1,4 +1,4 @@
-package com.classes.variables;
+package main.java.com.classes.variables;
 
 public class Vector2 {
     public int x = 0;

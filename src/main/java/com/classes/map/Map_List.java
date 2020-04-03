@@ -1,4 +1,4 @@
-package com.classes.map;
+package main.java.com.classes.map;
 
 public class Map_List {
 

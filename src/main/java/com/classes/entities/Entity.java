@@ -1,6 +1,6 @@
-package com.classes.entities;
+package main.java.com.classes.entities;
 
-import com.classes.variables.Vector2;
+import main.java.com.classes.variables.Vector2;
 
 public class Entity{
 
