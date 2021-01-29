@@ -3,7 +3,7 @@ package main.java.com.classes;
 public class Dungeon {
 
     int size;
-    String[][] strings;
+    public String[][] strings;
     String basic_texture = "[ ]";
 
     public Dungeon(int size) {

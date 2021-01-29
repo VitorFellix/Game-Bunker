@@ -3,6 +3,7 @@ package main.java.com;
 import java.util.Scanner;
 
 import main.java.com.classes.Dungeon;
+import main.java.com.classes.Player;
 
 public class TurnSystem {
     int turn_count = 0;
@@ -36,6 +37,11 @@ public class TurnSystem {
         turn_count++;
         print_message("Turn: " + String.valueOf(turn_count));
         print_dungeon();
+    }
+
+    private boolean move_player(Player player){
+        
+        return true;
     }
 
     private void print_dungeon(){
