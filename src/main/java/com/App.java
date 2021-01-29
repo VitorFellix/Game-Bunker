@@ -1,38 +1,28 @@
 package main.java.com;
 
-import java.util.Scanner;
-
-import main.java.com.classes.map.Map_Bunker;
-import main.java.com.classes.map.Map_Status;
+import main.java.com.classes.Dungeon;
 
 public class App {
+    static int idCount = 0;
+    static Dungeon dungeon = null;
+
+    public static int new_id() {
+		return idCount++;
+    }
 
     public static void main(String[] args) {
-        // System.out.println( "Hello THERE!" );
-        Map_Bunker bunker = new Map_Bunker(3, 9);
-        Scanner kb = new Scanner(System.in);
-        Map_Status status = new Map_Status(bunker, kb, 0, false, 1);
-        turn(status);
+        run_game();
     }
 
-    public static void turn(Map_Status status) {
-        int ActualTurn = status.getPreviousTurn() + 1;
-        status.getBunker().PrintOutGrid(status.getGridToDisplay());
-        String input = status.getKb().next();
-        switch (input) {
-            case "y":
-                status.setPreviousTurn(ActualTurn);
-                turn(status);
-                break;
-            case "n":
-                break;
-            default:
-                break;
+    public static void run_game() {
+        TurnSystem turn_system = new TurnSystem();
+
+        turn_system.print_message("What size will be your dungeon?");
+        dungeon = new Dungeon(Integer.valueOf(turn_system.get_input_int()));
+        turn_system.set_dungeon();
+        
+        while(true){
+            turn_system.do_turn();
         }
-    }
-
-    public static int NewId() {
-        int idCount = 0;
-		return idCount ++;
     }
 }

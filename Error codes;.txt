@@ -1,0 +1,3 @@
+Error codes;
+
+01 - dungeon coulnd't be found
