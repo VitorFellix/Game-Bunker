@@ -2,9 +2,11 @@ package main.java.com.classes;
 
 public class Dungeon {
 
-    int size;
+    public int size;
     public String[][] strings;
     String basic_texture = "[ ]";
+    Player player;
+    int[] player_position = new int[4]; 
 
     public Dungeon(int size) {
         this.size = size;
@@ -17,6 +19,22 @@ public class Dungeon {
         }
 
         //set_corners();
+    }
+
+    public boolean spawn_player(int x, int y){
+        player = new Player();
+        if(strings[x][y].equals("[ ]")){
+            strings[x][y] = player.texture;
+            return true;
+        }
+        return false;
+    }
+
+    public int[] move(int[] positions){
+        //The first two ints are the object to move, the rest is the position where it should go
+        strings[positions[2]][positions[3]] = strings[positions[0]][positions[1]];
+        strings[positions[0]][positions[1]] = basic_texture;
+        return new int[]{positions[2],positions[3],positions[2],positions[3]};
     }
 
     public String[][] give_me_dungeon(){
@@ -32,6 +50,18 @@ public class Dungeon {
             s = s.concat("\n");
         }
         return s;
+    }
+
+    private boolean is_inside_dungeon(int x, int y){
+        if(x >= 0 && y >= 0){
+            if(x < size && y < size){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
     
     private void set_corners(){

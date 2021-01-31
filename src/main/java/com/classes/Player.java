@@ -10,6 +10,7 @@ public class Player{
     Item[] inventory;
     int move_range = 5;
     int view_range = move_range;
+    public String texture = "[P]";
 
     public Player() {
         this.id = App.new_id();
